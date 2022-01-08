@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- react基础 -->
+    <script src="../../js/react.development.js"></script>
+   <!-- 支持react操作DOM -->
+    <script src="../../js/react-dom.development.js"></script>
+     <!-- 支持react把jsx转换成js -->
+    <script src="../../js/babel.min.js"></script>
+    <title>hellow_react</title>
+    <style>
+        .title{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        //jsx
+        // 1.创建虚拟DOM时，不要写引号。
+        // 2.标签中要混入js表达式，要使用大括号{}。
+        // 3.标签中样式的类名要用className指定。
+        // 4.标签中的内联样式要用style={{color:”white”,fontSize:”40px”}}。
+        // 5.只能有一个根标签。
+        // 6.标签必须时闭合的。
+        // 7.关于标签首字母
+        //     a.若首字母时小写，那么react就会去寻找与之同名的html标签
+        //     若找见，直接转为html同名元素
+        //     若未找见，报错
+        //     b.若首字母时大写，那么react就会去寻找与之同名的组件	  
+        //     若找见，那么就使用组件
+        //     若未找见，报错
+        const a = "fjsdhfs"
+        let VDOM = (
+            <div>
+                <h1 className="title" style={{color:"#fff",fontSize:"40px"}}>
+                    <span>hellow_react</span>
+                </h1>
+                <h2>{a}</h2>
+                {/*<peiqi>werwet</peiqi>*/}
+            </div>
+        );
+        ReactDOM.render(VDOM,document.getElementById('test'))
+
+    </script>
+</body>
+</html>

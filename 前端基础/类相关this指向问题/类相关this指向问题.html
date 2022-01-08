@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    class Person{
+        constructor(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        say(){
+            console.log(this)
+            console.log(`我叫${this.name}`)
+        }
+    }
+    class Student extends Person{
+        constructor(name,age,sex){
+            super(name,age)
+            this.sex = sex;
+        }
+
+    }
+    let P1 = new Person("小明","17岁");
+    console.log(P1)
+    P1.say()
+
+    let S1 = new Student("A","12","nv")
+    console.log(S1)
+    S1.say()
+</script>
+</html>

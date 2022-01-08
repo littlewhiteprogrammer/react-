@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- react基础 -->
+    <script src="../../js/react.development.js"></script>
+   <!-- 支持react操作DOM -->
+    <script src="../../js/react-dom.development.js"></script>
+     <!-- 支持react把jsx转换成js -->
+    <script src="../../js/babel.min.js"></script>
+    <script src="../../js/prop-types.js"></script>
+    <title>props</title>
+</head>
+<body>
+    <div id="test"></div>
+    <script type="text/babel">
+        const arr = ["111","222","333"]
+       class Penson extends React.Component{  
+            render(){
+                return (
+                    <ul>
+                        {
+                            arr.map(item=><li>{item}</li>)
+                        }
+                    </ul>
+                )
+            }
+       }
+       ReactDOM.render(<Penson/>,document.getElementById('test'))
+        // ReactDOM.render(<Penson {...data}/>,document.getElementById('test'))
+
+    </script>
+</body>
+</html>
